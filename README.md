@@ -27,7 +27,7 @@ O `workflow` automatizado realiza:
   * **Estrutura de Dados:** 
       * **audio_samples:** contém amostras representativas dos sinais de áudio em formato .wav (sem perdas), utilizadas para a extração das métricas acústicas. 
       * **scripts_textgrid:** reúne os algoritmos de processamento utilizados na segmentação dos eventos acústicos de inspiração, expiração, pausa e ruído. Os arquivos seguem o protocolo de nomenclatura cronológico e funcional (ex: script35_MZ), onde o sufixo identifica a zigosidade do par.
-      * **acoustic_parameters_csv:** armazena as tabelas estruturadas com os parâmetros acústicos extraídos. 
+      * **acoustic_parameters:** armazena as tabelas estruturadas com os parâmetros acústicos extraídos. 
  
   * **Corpus de Validação:** O *workflow* foi validado com um *corpus* de 25 amostras de choro neonatal pré-termo, que representam condições biológicas e acústicas diversas, incluindo ruído hospitalar (amostragem intencional).
   * **Anonimização:** Os dados são identificados por códigos alfanuméricos (ex: **48\_MZ\_3\_2de3**) em conformidade com a LGPD, garantindo o sigilo.
