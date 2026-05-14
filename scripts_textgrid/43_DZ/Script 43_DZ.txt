@@ -1,0 +1,653 @@
+# Script: Cria TextGrid com ciclos respiratórios na Área de Trabalho
+# Versão simplificada e robusta
+# Compatível com PRAAT 6.4.43
+
+duracao_total = 61.9653125
+# Caminho usando forward slashes (funciona no Windows)
+pasta$ = "C:/Users/USER/Desktop"
+nome_textgrid$ = "43_DZ_5_2de2_P_ciclos.TextGrid"
+caminho_completo$ = pasta$ + "/" + nome_textgrid$
+
+# Cria a pasta se não existir (a Área de Trabalho já existe, mas garantimos)
+createDirectory: pasta$
+
+# Remove o arquivo antigo se existir (ignora erro se não existir)
+filedelete 'caminho_completo$'
+
+# ------------------------------------------------------------
+# Escreve o TextGrid diretamente, com todos os intervalos
+# ------------------------------------------------------------
+fileappend "'caminho_completo$'" File type = "ooTextFile" 'newline$'
+fileappend "'caminho_completo$'" Object class = "TextGrid" 'newline$'
+fileappend "'caminho_completo$'" 'newline$'
+fileappend "'caminho_completo$'" xmin = 0 'newline$'
+fileappend "'caminho_completo$'" xmax = 'duracao_total' 'newline$'
+fileappend "'caminho_completo$'" tiers? <exists> 'newline$'
+fileappend "'caminho_completo$'" size = 1 'newline$'
+fileappend "'caminho_completo$'" item []: 'newline$'
+fileappend "'caminho_completo$'"     item [1]: 'newline$'
+fileappend "'caminho_completo$'"         class = "IntervalTier" 'newline$'
+fileappend "'caminho_completo$'"         name = "Ciclos Respiratórios" 'newline$'
+fileappend "'caminho_completo$'"         xmin = 0 'newline$'
+fileappend "'caminho_completo$'"         xmax = 'duracao_total' 'newline$'
+fileappend "'caminho_completo$'"         intervals: size = 123 'newline$'
+
+# Lista dos 123 intervalos (início, fim, rótulo) – em ordem cronológica
+
+fileappend "'caminho_completo$'"         intervals [1]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 0.00002083333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 1.19039583333333 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [2]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 1.19041666666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 1.39929166666667 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [3]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 1.3993125 'newline$'
+fileappend "'caminho_completo$'"             xmax = 3.6033125 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [4]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 3.60333333333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 3.7495625 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [5]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 3.74958333333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 3.88779166666667 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [6]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 3.9461875 'newline$'
+fileappend "'caminho_completo$'"             xmax = 5.2593125 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [7]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 5.25933333333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 5.58189583333333 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [8]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 5.58191666666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 12.4129791666667 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [9]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 12.413 'newline$'
+fileappend "'caminho_completo$'"             xmax = 12.756875 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [10]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 12.7568958333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 12.9110625 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [11]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 12.9110833333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 13.6082916666667 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [12]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 13.6083125 'newline$'
+fileappend "'caminho_completo$'"             xmax = 14.1136041666667 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [13]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 14.1313541666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 14.3068958333333 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [14]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 14.3651666666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 14.472375 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [15]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 14.4723958333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 15.2623125 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [16]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 15.2623333333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 15.6408333333333 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [17]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 15.6408541666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 16.2230208333333 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [18]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 16.2230416666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 16.5722708333333 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [19]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 16.5722916666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 16.6791458333333 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [20]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 16.6791666666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 16.7905416666667 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [21]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 16.7905625 'newline$'
+fileappend "'caminho_completo$'"             xmax = 16.9655833333333 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [22]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 16.9656041666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 18.6501666666667 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [23]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 18.69825 'newline$'
+fileappend "'caminho_completo$'"             xmax = 18.9284375 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [24]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 18.9586666666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 19.0596875 'newline$'
+fileappend "'caminho_completo$'"             text = "expiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [25]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 19.0597083333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 19.2934583333333 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [26]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 19.2934791666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 19.4194375 'newline$'
+fileappend "'caminho_completo$'"             text = "expiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [27]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 19.4194583333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 19.8495625 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [28]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 19.8495833333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 20.1578333333333 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [29]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 20.2084166666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 20.4596666666667 'newline$'
+fileappend "'caminho_completo$'"             text = "expiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [30]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 20.4596875 'newline$'
+fileappend "'caminho_completo$'"             xmax = 20.8836875 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [31]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 20.8837083333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 21.1706458333333 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [32]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 21.1706666666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 21.4005208333333 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [33]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 21.4005416666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 21.7054166666667 'newline$'
+fileappend "'caminho_completo$'"             text = "expiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [34]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 21.7376666666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 21.854125 'newline$'
+fileappend "'caminho_completo$'"             text = "expiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [35]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 21.8541458333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 22.4437083333333 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [36]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 22.4437291666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 23.1162916666667 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [37]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 23.1598125 'newline$'
+fileappend "'caminho_completo$'"             xmax = 23.3949791666667 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [38]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 23.4165 'newline$'
+fileappend "'caminho_completo$'"             xmax = 24.1243958333333 'newline$'
+fileappend "'caminho_completo$'"             text = "expiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [39]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 24.1244166666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 24.4055625 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [40]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 24.4055833333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 24.6914166666667 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [41]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 24.7152083333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 25.1060416666667 'newline$'
+fileappend "'caminho_completo$'"             text = "expiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [42]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 25.1060625 'newline$'
+fileappend "'caminho_completo$'"             xmax = 25.4163333333333 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [43]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 25.4163541666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 25.7153958333333 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [44]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 25.7154166666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 26.178 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [45]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 26.1780208333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 26.4827916666667 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [46]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 26.5077708333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 26.9588333333333 'newline$'
+fileappend "'caminho_completo$'"             text = "expiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [47]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 26.9588541666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 27.8468541666667 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [48]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 27.846875 'newline$'
+fileappend "'caminho_completo$'"             xmax = 28.1534791666667 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [49]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 28.1716041666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 28.4794375 'newline$'
+fileappend "'caminho_completo$'"             text = "expiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [50]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 28.4794583333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 28.7507083333333 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [51]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 28.7507291666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 28.8715208333333 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [52]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 28.8715416666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 29.0140208333333 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [53]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 29.0140416666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 29.3114166666667 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [54]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 29.399 'newline$'
+fileappend "'caminho_completo$'"             xmax = 29.8289583333333 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [55]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 29.8289791666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 30.49175 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [56]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 30.4917708333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 30.7265625 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [57]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 30.7265833333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 31.3871458333333 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [58]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 31.3871666666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 31.8204583333333 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [59]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 31.8362708333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 32.2941875 'newline$'
+fileappend "'caminho_completo$'"             text = "expiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [60]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 32.2942083333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 32.5671041666667 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [61]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 32.567125 'newline$'
+fileappend "'caminho_completo$'"             xmax = 32.7165833333333 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [62]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 32.7766666666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 33.0017708333333 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [63]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 33.0017916666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 33.8535 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [64]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 33.8535208333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 34.3865833333333 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [65]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 34.3866041666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 34.5591875 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [66]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 34.5592083333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 34.6727291666667 'newline$'
+fileappend "'caminho_completo$'"             text = "expiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [67]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 34.7471666666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 34.99875 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [68]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 34.9987708333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 35.1932083333333 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [69]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 35.1932291666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 35.2950625 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [70]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 35.2950833333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 35.4805416666667 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [71]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 35.4805625 'newline$'
+fileappend "'caminho_completo$'"             xmax = 35.7179791666667 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [72]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 35.718 'newline$'
+fileappend "'caminho_completo$'"             xmax = 36.0893333333333 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [73]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 36.0893541666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 36.3091666666667 'newline$'
+fileappend "'caminho_completo$'"             text = "expiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [74]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 36.3091875 'newline$'
+fileappend "'caminho_completo$'"             xmax = 36.7809791666667 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [75]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 36.781 'newline$'
+fileappend "'caminho_completo$'"             xmax = 37.2048333333333 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [76]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 37.2048541666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 37.7544583333333 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [77]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 37.7544791666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 38.0435416666667 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [78]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 38.0435625 'newline$'
+fileappend "'caminho_completo$'"             xmax = 38.9043125 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [79]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 38.9043333333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 39.1891458333333 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [80]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 39.1891666666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 39.889375 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [81]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 39.8893958333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 40.4220208333333 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [82]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 40.4783333333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 40.71175 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [83]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 40.7117708333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 41.1875416666667 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [84]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 41.1875625 'newline$'
+fileappend "'caminho_completo$'"             xmax = 41.5864375 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [85]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 41.5864583333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 42.1632916666667 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [86]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 42.1633125 'newline$'
+fileappend "'caminho_completo$'"             xmax = 42.4296666666667 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [87]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 42.48175 'newline$'
+fileappend "'caminho_completo$'"             xmax = 42.871875 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [88]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 42.9359375 'newline$'
+fileappend "'caminho_completo$'"             xmax = 43.0611041666667 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [89]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 43.061125 'newline$'
+fileappend "'caminho_completo$'"             xmax = 43.9387708333333 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [90]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 43.9387916666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 44.3970625 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [91]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 44.4772291666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 44.8067083333333 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [92]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 44.8067291666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 45.1138125 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [93]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 45.1138333333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 45.4555416666667 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [94]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 45.4555625 'newline$'
+fileappend "'caminho_completo$'"             xmax = 45.6169375 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [95]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 45.6169583333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 47.0296875 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [96]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 47.0297083333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 48.1432916666667 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [97]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 48.1433125 'newline$'
+fileappend "'caminho_completo$'"             xmax = 48.470875 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [98]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 48.4708958333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 48.6232083333333 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [99]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 48.6232291666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 48.8586875 'newline$'
+fileappend "'caminho_completo$'"             text = "expiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [100]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 48.8587083333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 49.774375 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [101]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 49.7743958333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 50.4566875 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [102]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 50.4567083333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 51.7549166666667 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [103]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 51.7549375 'newline$'
+fileappend "'caminho_completo$'"             xmax = 52.073375 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [104]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 52.0733958333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 52.5612708333333 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [105]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 52.5612916666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 52.8132708333333 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [106]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 52.8915625 'newline$'
+fileappend "'caminho_completo$'"             xmax = 53.3038541666667 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [107]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 53.303875 'newline$'
+fileappend "'caminho_completo$'"             xmax = 53.7032291666667 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [108]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 53.70325 'newline$'
+fileappend "'caminho_completo$'"             xmax = 54.1067708333333 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [109]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 54.1524791666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 54.4817708333333 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [110]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 54.5485 'newline$'
+fileappend "'caminho_completo$'"             xmax = 54.7320625 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [111]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 54.7775208333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 55.3761458333333 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [112]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 55.4040416666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 57.6621875 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [113]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 57.6873958333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 57.8668541666667 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [114]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 57.866875 'newline$'
+fileappend "'caminho_completo$'"             xmax = 58.3008125 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [115]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 58.3008333333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 58.5382916666667 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [116]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 58.5383125 'newline$'
+fileappend "'caminho_completo$'"             xmax = 58.6752916666667 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [117]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 58.6753125 'newline$'
+fileappend "'caminho_completo$'"             xmax = 58.8674375 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [118]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 58.8674583333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 59.463375 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [119]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 59.4633958333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 59.8708125 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [120]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 59.8708333333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 60.8453125 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [121]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 60.8453333333333 'newline$'
+fileappend "'caminho_completo$'"             xmax = 61.1724791666667 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [122]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 61.1725 'newline$'
+fileappend "'caminho_completo$'"             xmax = 61.7558958333333 'newline$'
+fileappend "'caminho_completo$'"             text = "pausa" 'newline$'
+
+fileappend "'caminho_completo$'"         intervals [123]: 'newline$'
+fileappend "'caminho_completo$'"             xmin = 61.7559166666667 'newline$'
+fileappend "'caminho_completo$'"             xmax = 61.9653125 'newline$'
+fileappend "'caminho_completo$'"             text = "inspiração" 'newline$'
+
+writeInfoLine: "TextGrid criado com sucesso: ", nome_textgrid$
+writeInfoLine: "Duração total: ", duracao_total, " segundos"
