@@ -1,6 +1,9 @@
 # cry-acoustic-workflow
 PT: Workflow automatizado para segmentação de ciclos respiratórios e extração de parâmetros acústicos de choro neonatal utilizando Praat e Python. EN: Automated workflow for respiratory cycle segmentation and acoustic parameter extraction of neonatal cry using Praat and Python.
 
+### Como Citar
+Vieira Gomes Guimbal de Aquino, A. C. (2026). Cry Acoustic Workflow [Data set]. Zenodo. https://doi.org/10.5281/zenodo.20241806
+
 ### 1\. Objetivo
 
   * **Objetivo Central:** Padronizar um fluxo de trabalho bioacústico no software Praat para analisar a expressividade prosódica do choro de bebês gemelares pré-termo. O foco é garantir a reprodutibilidade e precisão na segmentação dos ciclos respiratórios (inspiração, expiração e pausa).
